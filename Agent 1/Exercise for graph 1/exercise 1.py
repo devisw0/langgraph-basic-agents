@@ -37,3 +37,11 @@ result = complimentor_agent.invoke({"name": "User"})
 #So we have to specify what in the dictionary we want the output to be
 print(result['name'])
 #it works!
+
+#visualizing our graph
+#app is like the graph ina flowing state, get_graph takes a static moment (like a picture of a show) we can use
+#draw turns it into bytes using a mermaid diagramming language we can write in a file
+png_data = complimentor_agent.get_graph().draw_mermaid_png()
+# write it out
+with open("graph.png", "wb") as f: #context manager
+    f.write(png_data)
