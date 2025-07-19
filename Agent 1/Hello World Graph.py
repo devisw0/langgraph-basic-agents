@@ -17,4 +17,4 @@ def greeting_node(state:AgentState) -> AgentState: #Both input and output type o
     #Doc Strings tells the LLMS what this function does
     state['message'] = "Hey" + state["message"] + ", how is your day going?"
     #We take the message input from our state and make edits to it
-    #25:47
+    return state
