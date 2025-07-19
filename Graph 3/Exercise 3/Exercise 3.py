@@ -25,7 +25,7 @@ def agenode(state:Exercise3State) ->Exercise3State:
 #Create 3rd Node
 
 def skillsnode(state:Exercise3State) -> Exercise3State:
-    state['result'] = state['result'] + f"You have skills in: "
+    state['result'] = state['result'] + f"You have skills in: {state['skills']}"
     return state
 
 #Now we created our nodes, we must create our graph blueprint specifying it is of our type state
